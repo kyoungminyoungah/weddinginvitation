@@ -471,22 +471,24 @@ a {
 
 /* ─── Countdown ─── */
 .countdown {
- position: relative;
+  position: relative;
   z-index: 2;
+  /* 하단 여백 등 원본 디자인 그대로 유지 */
   padding: var(--spacing-lg) var(--spacing-md) calc(var(--spacing-lg) + var(--safe-bottom));
   text-align: center;
   color: var(--color-text);
   background-color: var(--color-bg-warm);
-
   width: 100%;
+
+  /* 원본의 음수 마진 효과 유지 (화면 꽉 차게) */
   margin-left: calc(-1 * var(--spacing-md));
   margin-right: calc(-1 * var(--spacing-md));
   padding-left: var(--spacing-md);
   padding-right: var(--spacing-md);
-
   border-radius: 0;
 }
 
+/* 아래는 모두 맨 처음 주신 디자인 코드와 동일합니다 */
 .countdown__label {
   font-size: 0.75rem;
   font-weight: 300;
