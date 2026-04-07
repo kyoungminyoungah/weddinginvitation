@@ -443,7 +443,7 @@ a {
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 200;
-  letter-spacing: 4px;
+  letter-spacing: 8px;
   margin-bottom: var(--spacing-md);
   line-height: 1.4;
 }
