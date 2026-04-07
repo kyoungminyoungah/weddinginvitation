@@ -745,7 +745,7 @@ a {
    Location Section
    ═══════════════════════════════════════════ */
 .location {
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-warm);
 }
 
 .location__info {
@@ -807,7 +807,7 @@ a {
    Account Section (축의금)
    ═══════════════════════════════════════════ */
 .account {
-  background-color: var(--color-bg-warm);
+  background-color: var(--color-bg);
 }
 
 .account__desc {
