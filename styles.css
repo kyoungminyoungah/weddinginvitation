@@ -330,6 +330,8 @@ a {
   height: 100%;
   object-fit: contain;
   transition: transform 0.3s ease;
+  max-width: none;
+  max-height: none;
 }
 
 .photo-modal__counter {
