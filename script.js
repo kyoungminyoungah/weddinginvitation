@@ -474,23 +474,28 @@
   let touchEndY = 0;
 
   function openPhotoModal(images, index) {
-    scrollY = window.scrollY;
+    scrollY = window.pageYOffset || document.documentElement.scrollTop;
     
     modalImages = images;
     modalIndex = index;
     showModalImage();
+    
     $('#photoModal').classList.add('is-open');
+    
     document.body.classList.add('no-scroll');
     document.body.style.top = `-${scrollY}px`;
   }
 
   function closePhotoModal() {
-    $('#photoModal').classList.remove('is-open');
-    document.body.classList.remove('no-scroll');
-    document.body.style.top = '';
+  $('#photoModal').classList.remove('is-open');
 
+  document.body.classList.remove('no-scroll');
+  document.body.style.top = '';
+
+  setTimeout(() => { 
     window.scrollTo(0, scrollY);
-  }
+  }, 0);
+}
 
   function showModalImage() {
     const img = $('#modalImg');
