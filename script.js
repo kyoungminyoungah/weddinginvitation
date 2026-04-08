@@ -5,6 +5,7 @@
 
 (function () {
   'use strict';
+  let scrollY = 0;
 
   /* ═══════════════════════════════════════════
      Utility Helpers
@@ -473,16 +474,22 @@
   let touchEndY = 0;
 
   function openPhotoModal(images, index) {
+    scrollY = window.scrollY;
+    
     modalImages = images;
     modalIndex = index;
     showModalImage();
     $('#photoModal').classList.add('is-open');
     document.body.classList.add('no-scroll');
+    document.body.style.top = `-${scrollY}px`;
   }
 
   function closePhotoModal() {
     $('#photoModal').classList.remove('is-open');
     document.body.classList.remove('no-scroll');
+    document.body.style.top = '';
+
+    window.scrollTo(0, scrollY);
   }
 
   function showModalImage() {
