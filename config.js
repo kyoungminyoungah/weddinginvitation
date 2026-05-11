@@ -40,7 +40,7 @@ const CONFIG = {
     time: "14:00",
     venue: "르비르모어",
     hall: "2F 클리타홀",
-    address: "서울특별시 강남구 테헤란로 406 샹제리제센터 A동 2층\n선릉역 1번출구 도보 1분",
+    address: "서울특별시 강남구 테헤란로 406 샹제리제센터 A동 2층\n\n선릉역 1번출구 도보 1분",
     tel: "02-501-7000",
     mapLinks: {
       kakao: "https://place.map.kakao.com/404070599",
