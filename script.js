@@ -297,8 +297,7 @@
 
   function initGreeting() {
     $('#greetingTitle').textContent = CONFIG.greeting.title;
-    $('#greetingContent').textContent = CONFIG.greeting.content;
-
+    $('#greetingContent').innerHTML = CONFIG.greeting.content.replace(/\n/g, '<br>');
     const g = CONFIG.groom;
     const b = CONFIG.bride;
 
@@ -416,7 +415,7 @@
 
   function initStory(storyImages) {
     $('#storyTitle').textContent = CONFIG.story.title;
-    $('#storyContent').textContent = CONFIG.story.content;
+    $('#storyContent').innerHTML = CONFIG.story.content.replace(/\n/g, '<br>');
 
     const container = $('#storyPhotos');
     // Remove loading placeholder if present
@@ -572,7 +571,7 @@
     $('#locationVenue').textContent = w.venue;
     $('#locationHall').textContent = w.hall;
     $('#locationAddress').textContent = w.address;
-    $('#locationTel').textContent = w.tel ? `Tel. ${w.tel}` : '';
+    $('#locationAddress').innerHTML = w.address.replace(/\n/g, '<br>');
     $('#locationMapImg').src = 'images/location/1.jpg';
     $('#kakaoMapBtn').href = w.mapLinks.kakao || '#';
     $('#naverMapBtn').href = w.mapLinks.naver || '#';
@@ -730,7 +729,7 @@
 
     // Set story text immediately (photos load async)
     $('#storyTitle').textContent = CONFIG.story.title;
-    $('#storyContent').textContent = CONFIG.story.content;
+    $('#storyContent').innerHTML = CONFIG.story.content.replace(/\n/g, '<br>');
 
     // Auto-detect story and gallery images in parallel
     const [storyImages, galleryImages] = await Promise.all([
